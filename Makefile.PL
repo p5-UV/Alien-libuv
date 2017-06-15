@@ -7,7 +7,7 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Interface to shortening URLs using L<http://libuv.org>",
+  "ABSTRACT" => "Interface to the libuv library L<http://libuv.org>",
   "AUTHOR" => "Chase Whitener <capoeirab\@cpan.org>",
   "BUILD_REQUIRES" => {
     "Alien::Build" => "0.40",

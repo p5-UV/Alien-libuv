@@ -10,7 +10,7 @@ __END__
 
 =head1 NAME
 
-Alien::libuv - Interface to shortening URLs using L<http://libuv.org>
+Alien::libuv - Interface to the libuv library L<http://libuv.org>
 
 =head1 SYNOPSIS
 

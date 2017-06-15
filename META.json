@@ -1,5 +1,5 @@
 {
-   "abstract" : "Interface to shortening URLs using L<http://libuv.org>",
+   "abstract" : "Interface to the libuv library L<http://libuv.org>",
    "author" : [
       "Chase Whitener <capoeirab@cpan.org>"
    ],

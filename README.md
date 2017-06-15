@@ -1,6 +1,6 @@
 # NAME
 
-Alien::libuv - Interface to shortening URLs using [http://libuv.org](http://libuv.org)
+Alien::libuv - Interface to the libuv library [http://libuv.org](http://libuv.org)
 
 # SYNOPSIS
 
