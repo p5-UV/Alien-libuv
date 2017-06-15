@@ -4,16 +4,49 @@ use strict;
 use warnings;
 use base qw( Alien::Base );
 
-# ABSTRACT: Find or build libuv
-# VERSION
-# ALIEN SYNOPSIS
+1;
+
+__END__
+
+=head1 NAME
+
+Alien::libuv - Interface to shortening URLs using L<http://libuv.org>
+
+=head1 SYNOPSIS
+
+In your C<Makefile.PL>:
+
+    use strict;
+    use warnings;
+
+    use ExtUtils::MakeMaker;
+    use Config;
+    use Alien::libuv;
+
+    WriteMakefile(
+      ...
+      CONFIGURE_REQUIRES => {
+        'Alien::libuv' => '0',
+      },
+      CCFLAGS => Alien::libuv->cflags . " $Config{ccflags}",
+      LIBS    => [ Alien::libuv->libs ],
+      ...
+    );
 
 =head1 DESCRIPTION
 
-This package can be used by other CPAN modules that require xz,
-the compression utility, or liblzma, which comes with it.
+This package can be used by other L<CPAN|https://metacpan.org> modules that
+require L<libuv|http://libuv.org>.
 
+=head1 AUTHOR
 
-# ALIEN SEE ALSO
+Chase Whitener <F<capoeirab@cpan.org>>
 
-1;
+=head1 COPYRIGHT & LICENSE
+
+Copyright (c) 2017 Chase Whitener. All rights reserved.
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+=cut

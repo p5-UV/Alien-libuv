@@ -12,4 +12,11 @@ share {
 
   plugin 'Build::Autoconf' => ();
 
+  build [
+    'sh autogen.sh',
+    '%{configure}',
+    '%{make}',
+    '%{make} test',
+    '%{make} install',
+  ];
 };

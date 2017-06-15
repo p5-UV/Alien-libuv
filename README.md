@@ -1,73 +1,40 @@
-# Alien::xz [![Build Status](https://secure.travis-ci.org/plicease/Alien-xz.png)](http://travis-ci.org/plicease/Alien-xz)
+# NAME
 
-Find or build xz
+Alien::libuv - Interface to shortening URLs using [http://libuv.org](http://libuv.org)
 
 # SYNOPSIS
 
-In your Build.PL:
+In your `Makefile.PL`:
 
-    use Module::Build;
-    use Alien::xz;
-    my $builder = Module::Build->new(
-      ...
-      configure_requires => {
-        'Alien::xz' => '0',
-        ...
-      },
-      extra_compiler_flags => Alien::xz->cflags,
-      extra_linker_flags   => Alien::xz->libs,
-      ...
-    );
-    
-    $build->create_build_script;
-
-In your Makefile.PL:
+    use strict;
+    use warnings;
 
     use ExtUtils::MakeMaker;
     use Config;
-    use Alien::xz;
-    
+    use Alien::libuv;
+
     WriteMakefile(
       ...
       CONFIGURE_REQUIRES => {
-        'Alien::xz' => '0',
+        'Alien::libuv' => '0',
       },
-      CCFLAGS => Alien::xz->cflags . " $Config{ccflags}",
-      LIBS    => [ Alien::xz->libs ],
+      CCFLAGS => Alien::libuv->cflags . " $Config{ccflags}",
+      LIBS    => [ Alien::libuv->libs ],
       ...
     );
 
-In your script or module:
-
-    use Alien::xz;
-    use Env qw( @PATH );
-    
-    unshift @ENV, Alien::xz->bin_dir;
-
 # DESCRIPTION
 
-This package can be used by other CPAN modules that require xz,
-the compression utility, or liblzma, which comes with it.
-
-# HELPERS
-
-## xz
-
-    %{xz}
-
-Returns the name of the xz command.  Usually just `xz`.
-
-# SEE ALSO
-
-[Alien](https://metacpan.org/pod/Alien), [Alien::Base](https://metacpan.org/pod/Alien::Base), [Alien::Build::Manual::AlienUser](https://metacpan.org/pod/Alien::Build::Manual::AlienUser)
+This package can be used by other [CPAN](https://metacpan.org) modules that
+require [libuv](http://libuv.org).
 
 # AUTHOR
 
-Graham Ollis <plicease@cpan.org>
+Chase Whitener <`capoeirab@cpan.org`>
 
-# COPYRIGHT AND LICENSE
+# COPYRIGHT & LICENSE
 
-This software is copyright (c) 2017 by Graham Ollis.
+Copyright (c) 2017 Chase Whitener. All rights reserved.
 
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
