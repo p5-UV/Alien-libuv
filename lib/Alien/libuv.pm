@@ -36,6 +36,12 @@ In your C<Makefile.PL>:
       ...
     );
 
+=head1 NOTICE
+
+This will not yet work on Windows. However, it should function properly on
+linux and unix platforms. We will be working hard to make things behave on
+Windows as soon as possible.
+
 =head1 DESCRIPTION
 
 This package can be used by other L<CPAN|https://metacpan.org> modules that

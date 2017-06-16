@@ -23,6 +23,12 @@ In your `Makefile.PL`:
       ...
     );
 
+# NOTICE
+
+This will not yet work on Windows. However, it should function properly on
+linux and unix platforms. We will be working hard to make things behave on
+Windows as soon as possible.
+
 # DESCRIPTION
 
 This package can be used by other [CPAN](https://metacpan.org) modules that

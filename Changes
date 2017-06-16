@@ -2,3 +2,4 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
   - initial version
+  - Does not yet work on Windows.
