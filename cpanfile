@@ -7,14 +7,14 @@ on 'runtime' => sub {
 };
 
 on 'build' => sub {
-  requires 'Alien::Base';
-  requires 'Alien::Build';
-  requires 'Alien::Build::MM';
-  requires 'Alien::Build::Plugin::Build::Autoconf';
-  requires 'Alien::libtool24';
-  requires 'Config';
-  requires 'ExtUtils::MakeMaker';
-  requires 'IPC::Cmd';
+    requires 'Alien::Base';
+    requires 'Alien::Build';
+    requires 'Alien::Build::MM';
+    requires 'Alien::Build::Plugin::Build::Autoconf';
+    #requires 'Alien::libtool24';
+    requires 'Config';
+    requires 'ExtUtils::MakeMaker';
+    requires 'IPC::Cmd';
 };
 
 on 'test' => sub {
