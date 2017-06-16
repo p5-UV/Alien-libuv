@@ -4,6 +4,9 @@ use strict;
 use warnings;
 use base qw( Alien::Base );
 
+our $VERSION = '0.001';
+$VERSION = eval $VERSION;
+
 1;
 
 __END__

@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-
+use 5.008001;
 
 use ExtUtils::MakeMaker;
 
@@ -10,9 +10,14 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "Interface to the libuv library L<http://libuv.org>",
   "AUTHOR" => "Chase Whitener <capoeirab\@cpan.org>",
   "BUILD_REQUIRES" => {
+    "Alien::Base" => 0,
     "Alien::Build" => "0.40",
     "Alien::Build::MM" => "0.40",
-    "ExtUtils::MakeMaker" => "6.52"
+    "Alien::Build::Plugin::Build::Autoconf" => 0,
+    "Alien::libtool24" => 0,
+    "Config" => 0,
+    "ExtUtils::MakeMaker" => "6.52",
+    "IPC::Cmd" => 0
   },
   "CONFIGURE_REQUIRES" => {
     "Alien::Build" => "0.40",
@@ -21,12 +26,20 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "Alien-libuv",
   "LICENSE" => "perl",
+  "MIN_PERL_VERSION" => "5.008001",
   "NAME" => "Alien::libuv",
-  "PREREQ_PM" => {},
+  "PREREQ_PM" => {
+    "Alien::Base" => 0,
+    "base" => 0,
+    "strict" => 0,
+    "warnings" => 0
+  },
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.52",
     "File::Spec" => 0,
-    "Test::More" => 0
+    "Test2::Suite" => 0,
+    "Test::Alien" => 0,
+    "Test::More" => "0.88"
   },
   "VERSION" => "0.001",
   "test" => {
@@ -36,11 +49,21 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "Alien::Base" => 0,
   "Alien::Build" => "0.40",
   "Alien::Build::MM" => "0.40",
+  "Alien::Build::Plugin::Build::Autoconf" => 0,
+  "Alien::libtool24" => 0,
+  "Config" => 0,
   "ExtUtils::MakeMaker" => "6.52",
   "File::Spec" => 0,
-  "Test::More" => 0
+  "IPC::Cmd" => 0,
+  "Test2::Suite" => 0,
+  "Test::Alien" => 0,
+  "Test::More" => "0.88",
+  "base" => 0,
+  "strict" => 0,
+  "warnings" => 0
 );
 
 
