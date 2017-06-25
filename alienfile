@@ -3,6 +3,10 @@ use alienfile;
 plugin 'PkgConfig' => 'libuv';
 
 share {
+  requires 'Alien::autoconf';
+  requires 'Alien::automake';
+  requires 'Alien::libtool';
+
   plugin Download => (
     url     => 'http://dist.libuv.org/dist/v1.12.0',
     version => qr/^libuv-v([0-9\.]+)\.tar\.gz$/,
