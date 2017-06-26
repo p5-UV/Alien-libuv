@@ -1,7 +1,10 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
-  - 
+  - Use Alien::libtool (Graham Ollis)
+  - Use Alien::autoconf (Graham Ollis)
+  - Use Alien::automake (Graham Ollis)
+  - Fix install on BSD, OS X, and Windows (Graham Ollis)
 
 0.001     2017-06-16
   - initial version

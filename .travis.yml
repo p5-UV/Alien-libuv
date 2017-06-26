@@ -1,11 +1,6 @@
 language: perl
 sudo: false
 
-addons:
-  apt:
-    packages:
-      - liblzma-dev
-
 install:
   - perlbrew list
   - cpanm -n App::af
