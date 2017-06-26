@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - 
+
+0.002     2017-06-26
   - Use Alien::libtool (Graham Ollis)
   - Use Alien::autoconf (Graham Ollis)
   - Use Alien::automake (Graham Ollis)
