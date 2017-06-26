@@ -30,6 +30,10 @@
             "Alien::Build" : "0.40",
             "Alien::Build::MM" : "0.40",
             "Alien::Build::Plugin::Build::Autoconf" : "0",
+            "Alien::MSYS" : "0",
+            "Alien::autoconf" : "0",
+            "Alien::automake" : "0",
+            "Alien::libtool" : "0",
             "Config" : "0",
             "ExtUtils::MakeMaker" : "6.52",
             "IPC::Cmd" : "0"
@@ -76,6 +80,7 @@
             "ExtUtils::MakeMaker" : "6.52",
             "File::Spec" : "0",
             "Test2::Suite" : "0",
+            "Test2::V0" : "0",
             "Test::Alien" : "0",
             "Test::More" : "0.88"
          }
@@ -579,7 +584,7 @@
       }
    },
    "x_contributors" : [
-      "Chase Whitener <cwhitener@gmail.com>"
+      "Graham Ollis <plicease@cpan.org>"
    ],
    "x_serialization_backend" : "Cpanel::JSON::XS version 3.0233"
 }

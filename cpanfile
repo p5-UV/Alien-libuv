@@ -11,7 +11,10 @@ on 'build' => sub {
     requires 'Alien::Build';
     requires 'Alien::Build::MM';
     requires 'Alien::Build::Plugin::Build::Autoconf';
-    #requires 'Alien::libtool24';
+    requires 'Alien::MSYS';
+    requires 'Alien::autoconf';
+    requires 'Alien::automake';
+    requires 'Alien::libtool';
     requires 'Config';
     requires 'ExtUtils::MakeMaker';
     requires 'IPC::Cmd';
@@ -21,6 +24,7 @@ on 'test' => sub {
     requires 'Test::Alien';
     requires 'Test::More' => '0.88';
     requires 'Test2::Suite';
+    requires 'Test2::V0';
 };
 
 on 'develop' => sub {
