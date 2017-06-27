@@ -1,7 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
-  - 
+  - Bump prereqs for Alien:: tools
+  - Isolate dynamic libraries (Graham Ollis)
 
 0.002     2017-06-26
   - Use Alien::libtool (Graham Ollis)
