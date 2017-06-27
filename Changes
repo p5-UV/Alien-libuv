@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - 
+
+0.003     2017-06-27
   - Bump prereqs for Alien:: tools
   - Isolate dynamic libraries (Graham Ollis)
 
