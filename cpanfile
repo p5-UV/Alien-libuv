@@ -11,10 +11,11 @@ on 'build' => sub {
     requires 'Alien::Build';
     requires 'Alien::Build::MM';
     requires 'Alien::Build::Plugin::Build::Autoconf';
+    requires 'Alien::Build::Plugin::Gather::IsolateDynamic';
     requires 'Alien::MSYS';
-    requires 'Alien::autoconf';
-    requires 'Alien::automake';
-    requires 'Alien::libtool';
+    requires 'Alien::autoconf' => '0.02';
+    requires 'Alien::automake' => '0.02';
+    requires 'Alien::libtool' => '0.02';
     requires 'Config';
     requires 'ExtUtils::MakeMaker';
     requires 'IPC::Cmd';
