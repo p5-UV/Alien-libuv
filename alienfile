@@ -26,4 +26,6 @@ share {
     '%{make} test',
     '%{make} install',
   ];
+  
+  plugin 'Gather::IsolateDynamic' => ();
 };
