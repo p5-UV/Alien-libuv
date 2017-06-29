@@ -1,6 +1,9 @@
 use alienfile;
 
-plugin 'PkgConfig' => 'libuv';
+plugin 'PkgConfig' => (
+    pkg_name => 'libuv',
+    minimum_version => '1.0.0',
+);
 
 share {
   # note on apple weirdisms: https://github.com/joyent/libuv/issues/1200
@@ -26,6 +29,6 @@ share {
     '%{make} test',
     '%{make} install',
   ];
-  
+
   plugin 'Gather::IsolateDynamic' => ();
 };
