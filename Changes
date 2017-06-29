@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.004     2017-06-29
   - Ensure we're at least using libuv v1.0.0. Prior versions of libuv handled
     errors differently, causing problems for XS modules needing to deal with
     both.
