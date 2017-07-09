@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.005     2017-07-08
   - Updated the requirements to include Alien::m4
   - Update requirements of Alien::libtool, automake, and autoconf for some
     corrections
