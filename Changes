@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.006     2017-07-10
   - Bump the share version to libuv v1.13.1
   - Add a recommended test install of FFI::Platypus
   - Diag out the install_type for better debugging later
