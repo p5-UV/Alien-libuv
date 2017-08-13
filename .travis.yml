@@ -14,6 +14,7 @@ env:
   - "HARNESS_OPTIONS=j9"
 install:
   - "cpanm -n Test::More Test::Pod Test::Pod::Coverage"
+  - rm -f cpanfile
   - "cpanm -n --installdeps ."
 sudo: false
 notifications:
