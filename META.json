@@ -472,7 +472,9 @@
             "config" : {
                "Dist::Zilla::Plugin::Test::Kwalitee" : {
                   "filename" : "xt/release/kwalitee.t",
-                  "skiptest" : []
+                  "skiptest" : [
+                     "no_symlinks"
+                  ]
                }
             },
             "name" : "Test::Kwalitee",
