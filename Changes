@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Depend on Alien::Autotools now
+  - Cleanup the build on Windows a bit (hopefully speed up this process)
 
 0.006     2017-07-10
   - Bump the share version to libuv v1.13.1
