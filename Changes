@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.007     2017-08-15
   - Depend on Alien::Autotools now
   - Cleanup the build on Windows a bit (hopefully speed up this process)
   - Only require Alien::MSYS on Windows
