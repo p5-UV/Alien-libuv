@@ -1,8 +1,10 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Ensure the download URL for libuv is now over https as that's now default
+  - Bump libuv version to 1.14.0
 
-0.007     2017-08-15
+0.007     2017-08-15 (TRIAL)
   - Depend on Alien::Autotools now
   - Cleanup the build on Windows a bit (hopefully speed up this process)
   - Only require Alien::MSYS on Windows
