@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}} (TRIAL)
+
+0.009     2017-08-17 (TRIAL)
   - Re-release to fix the bsd-tar headers in the tarball
 
 0.008     2017-08-17 (TRIAL)
