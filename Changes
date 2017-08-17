@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.008     2017-08-17
   - Ensure the download URL for libuv is now over https as that's now default
   - Bump libuv version to 1.14.0
 
