@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
-{{$NEXT}}
+{{$NEXT}} (TRIAL)
+  - Re-release to fix the bsd-tar headers in the tarball
 
 0.008     2017-08-17 (TRIAL)
   - Ensure the download URL for libuv is now over https as that's now default
