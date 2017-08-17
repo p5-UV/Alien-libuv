@@ -14,7 +14,7 @@ share {
   requires 'Alien::Autotools';
 
   plugin Download => (
-    url     => 'http://dist.libuv.org/dist/v1.13.1',
+    url     => 'https://dist.libuv.org/dist/v1.13.1',
     version => qr/^libuv-v([0-9\.]+)\.tar\.gz$/,
   );
 
