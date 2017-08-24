@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.010     2017-08-24
   - Production release with the changes from the three previous trial releases
 
 0.009     2017-08-17 (TRIAL)
