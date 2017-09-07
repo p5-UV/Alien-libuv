@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.011     2017-09-06
   - Only require Alien::Autotools for a non-windows source build (Graham Ollis)
   - Update to the libuv v1.14.1 release.
 
