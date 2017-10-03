@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.012     2017-10-03
   - Update to the libuv v1.15.0 release
   - Support for NetBSD
 
