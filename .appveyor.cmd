@@ -19,11 +19,8 @@ if "%perl_type%" == "cygwin" (
   )
   set "PATH=C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Strawberry\c\bin;%PATH%"
 ) else if "%perl_type%" == "system" (
-  mkdir c:\dmake
   cinst -y curl
-  curl http://www.cpan.org/authors/id/S/SH/SHAY/dmake-4.12.2.2.zip -o c:\dmake\dmake.zip
-  7z x c:\dmake\dmake.zip -oc:\ >NUL
-  set "PATH=c:\dmake;C:\MinGW\bin;%PATH%"
+  ppm install dmake mingw
 ) else (
   echo.Unknown perl type "%perl_type%"! 1>&2
   exit /b 1
