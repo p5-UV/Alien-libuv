@@ -5,7 +5,7 @@ goto :eof
 :perl_setup
 if not defined perl_type set perl_type=system
 if "%perl_type%" == "cygwin" (
-  start /wait c:\cygwin\setup-x86.exe -q -g -P perl -P make -P gcc -P gcc-g++ -P libcrypt-devel -P openssl-devel -P autoconf -P automake -P libtool
+  start /wait c:\cygwin\setup-x86.exe -q -g -P perl -P make -P gcc -P gcc-g++ -P libcrypt-devel -P openssl-devel -P autoconf -P automake -P libtool -P curl
   set "PATH=C:\cygwin\usr\local\bin;C:\cygwin\bin;%PATH%"
 ) else if "%perl_type%" == "strawberry" (
   if not defined perl_version (
@@ -18,9 +18,8 @@ if "%perl_type%" == "cygwin" (
     exit /b 1
   )
   set "PATH=C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Strawberry\c\bin;%PATH%"
-) else if "%perl_type%" == "system" (
-  cinst -y curl
-  ppm install dmake mingw
+) else if "%perl_type%" == "activestate" (
+  start /wait ppm install dmake MinGW
 ) else (
   echo.Unknown perl type "%perl_type%"! 1>&2
   exit /b 1
