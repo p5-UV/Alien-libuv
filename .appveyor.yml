@@ -19,11 +19,9 @@ environment:
     - perl_type: strawberry
       perl_version: 5.18.4.1
     - perl_type: strawberry
-      perl_version: 5.16.3.3
+      perl_version: 5.16.3.20170202
     - perl_type: strawberry
       perl_version: 5.14.4.1
-    - perl_type: strawberry
-      perl_version: 5.12.3.1
 
 install:
   - 'call .appveyor.cmd perl_setup'
