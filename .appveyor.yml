@@ -7,7 +7,6 @@ matrix:
 environment:
   matrix:
     - perl_type: cygwin
-#    - perl_type: activestate
     - perl_type: strawberry
       perl_version: 5.26.1.1
     - perl_type: strawberry
@@ -26,7 +25,7 @@ environment:
 install:
   - 'call .appveyor.cmd perl_setup'
   - '%perl% -V'
-  - '%cpanm% -n Alien::Base IO::Socket::SSL LWP::Protocol::https'
+  - '%cpanm% -n Alien::Base IO::Socket::SSL LWP::Protocol::https HTTP::Tiny'
   - '%cpanm% --installdeps -n .'
 
 build: off
