@@ -2,6 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
   - Update to the libuv v1.20.0 release
+  - Bump to major version 1 to reflect same major version as libuv.
+  - Update the alienfile to add the various libs needed on Win32
+  - Update the alienfile to add the various cflags needed on Win32
 
 0.017     2018-03-29
   - Update to the libuv v1.19.2 release
