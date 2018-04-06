@@ -16,7 +16,7 @@ In your `Makefile.PL`:
     WriteMakefile(
       ...
       CONFIGURE_REQUIRES => {
-        'Alien::libuv' => '0',
+        'Alien::libuv' => '1.000',
       },
       CCFLAGS => Alien::libuv->cflags . " $Config{ccflags}",
       LIBS    => [ Alien::libuv->libs ],
