@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Update to the libuv v1.20.3 release
 
 1.001     2018-04-15
   - Fix compiler flag typos for windows
