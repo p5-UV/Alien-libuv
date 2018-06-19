@@ -83,7 +83,7 @@ share {
         #pragma comment(lib, "User32.lib")
         #pragma comment(lib, "Userenv.lib")
         #pragma comment(lib, "Ws2_32.lib")
-        $build->runtime_prop->{$_} .= ' -ladvapi32 -lIphlpapi -lkernel32 -lpsapi -luser32 -luserenv -ws2_32' for qw( libs libs_static );
+        $build->runtime_prop->{$_} .= ' -ladvapi32 -lIphlpapi -lkernel32 -lpsapi -luser32 -luserenv -lws2_32' for qw( libs libs_static );
     });
 
     build [
