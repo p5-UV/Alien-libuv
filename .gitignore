@@ -8,6 +8,8 @@ Makefile.old
 SSL
 blib
 blib/
+.alien/
+_alien/
 .build/
 _build/
 cover_db/
