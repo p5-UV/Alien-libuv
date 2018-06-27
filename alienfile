@@ -14,9 +14,15 @@ sub WINVER() {
         warn "We had an error grabbing the Win32 OS Name: $err";
     }
 
+    my $err_msg = "This version of Windows is no longer supported. See: ";
+    $err_msg .= "https://github.com/libuv/libuv/blob/v1.x/SUPPORTED_PLATFORMS.md";
+
     if ($ver =~ /^Win(?:Win32s|95|98|Me|NT4|NT3\.51|HomeSvr)/) {
-        warn "This version of Windows is really old and we can't install here";
+        warn $err_msg;
         exit(1);
+    }
+    if ($ver =~ /^Win(?:200[038]|XP\/\.NET|Vista)/) {
+        warn $err_msg. "\nBut we'll attempt a build anyway.";
     }
     return '0x0500' if $ver =~ /^Win2000/;
     return '0x0501' if $ver =~ /^WinXP\/\.Net/;
@@ -44,7 +50,7 @@ share {
   meta->prop->{env}->{LIBTOOLIZE} = 'libtoolize' if $^O eq 'darwin';
 
   plugin Download => (
-    url     => 'https://dist.libuv.org/dist/v1.20.3',
+    url     => 'https://dist.libuv.org/dist/v1.21.0',
     version => qr/^libuv-v([0-9\.]+)\.tar\.gz$/,
   );
 

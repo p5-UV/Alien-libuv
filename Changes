@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Update to the libuv v1.20.3 release
+  - Deprecate all Windows versions prior to Windows 7 as per
+    https://github.com/libuv/libuv/blob/v1.x/SUPPORTED_PLATFORMS.md
 
 1.003     2018-06-19
   - Update library inclusions for building with MinGW on Windows.
