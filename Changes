@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.004     2018-07-24
   - Update to the libuv v1.22.0 release
   - Deprecate all Windows versions prior to Windows 7 as per
     https://github.com/libuv/libuv/blob/v1.x/SUPPORTED_PLATFORMS.md
