@@ -2,7 +2,7 @@ if ($^O eq 'MSWin32') {
     my $ver;
     my $err = do {
         local $@;
-        eval { require Win32; $ver = Win32::GetOSVersion(); 1; };
+        eval { require Win32; $ver = (Win32::GetOSVersion())[1]; 1; };
         $@;
     };
     if ($err || $ver < 6) {
