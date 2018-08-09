@@ -32,8 +32,7 @@ my %WriteMakefileArgs = (
   "CONFIGURE_REQUIRES" => {
     "Alien::Build" => "0.32",
     "Alien::Build::MM" => "0.32",
-    "Alien::Build::Plugin::Build::CMake" => "0.99",
-    "Alien::Build::Plugin::Build::Make" => "0.99",
+    "Alien::Build::Plugin::Build::Make" => "0.01",
     "ExtUtils::MakeMaker" => "6.52"
   },
   "DISTNAME" => "Alien-libuv",

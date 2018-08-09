@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Don't even try to build on anything below Win7; It's broken.
 
 1.004     2018-07-24
   - Update to the libuv v1.22.0 release
