@@ -288,14 +288,25 @@
             "version" : "6.012"
          },
          {
+            "class" : "Dist::Zilla::Plugin::RewriteVersion",
+            "config" : {
+               "Dist::Zilla::Plugin::RewriteVersion" : {
+                  "add_tarball_name" : 0,
+                  "finders" : [
+                     ":ExecFiles",
+                     ":InstallModules"
+                  ],
+                  "global" : 1,
+                  "skip_version_provider" : 1
+               }
+            },
+            "name" : "RewriteVersion",
+            "version" : "0.018"
+         },
+         {
             "class" : "Dist::Zilla::Plugin::AlienBuild",
             "name" : "AlienBuild",
             "version" : "0.24"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::PkgVersion",
-            "name" : "PkgVersion",
-            "version" : "6.012"
          },
          {
             "class" : "Dist::Zilla::Plugin::ReadmeAnyFromPod",
@@ -376,7 +387,7 @@
                }
             },
             "name" : "Git::Contributors",
-            "version" : "0.034"
+            "version" : "0.035"
          },
          {
             "class" : "Dist::Zilla::Plugin::GithubMeta",
@@ -627,6 +638,6 @@
       "Graham Ollis <plicease@cpan.org>"
    ],
    "x_generated_by_perl" : "v5.26.1",
-   "x_serialization_backend" : "Cpanel::JSON::XS version 4.04"
+   "x_serialization_backend" : "Cpanel::JSON::XS version 4.06"
 }
 

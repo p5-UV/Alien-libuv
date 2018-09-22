@@ -6,22 +6,24 @@ Alien::libuv - Interface to the libuv library [http://libuv.org](http://libuv.or
 
 In your `Makefile.PL`:
 
-    use strict;
-    use warnings;
+```perl
+use strict;
+use warnings;
 
-    use ExtUtils::MakeMaker;
-    use Config;
-    use Alien::libuv;
+use ExtUtils::MakeMaker;
+use Config;
+use Alien::libuv;
 
-    WriteMakefile(
-      ...
-      CONFIGURE_REQUIRES => {
-        'Alien::libuv' => '1.000',
-      },
-      CCFLAGS => Alien::libuv->cflags . " $Config{ccflags}",
-      LIBS    => [ Alien::libuv->libs ],
-      ...
-    );
+WriteMakefile(
+  ...
+  CONFIGURE_REQUIRES => {
+    'Alien::libuv' => '1.000',
+  },
+  CCFLAGS => Alien::libuv->cflags . " $Config{ccflags}",
+  LIBS    => [ Alien::libuv->libs ],
+  ...
+);
+```
 
 # DESCRIPTION
 
