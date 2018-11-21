@@ -1,8 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
-  - Update to the libuv v1.23.1 release
+  - Update to the libuv v1.24.1 release
   - Remove some unnecessary build flags
+  - Add -msse2 flag
 
 1.006     2018-08-28
   - Update to the libuv v1.23.0 release
