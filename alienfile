@@ -13,7 +13,7 @@ share {
     meta->prop->{env}->{LIBTOOLIZE} = 'libtoolize' if $^O eq 'darwin';
 
     plugin Download => (
-        url     => 'https://dist.libuv.org/dist/v1.23.0',
+        url     => 'https://dist.libuv.org/dist/v1.24.1',
         version => qr/^libuv-v([0-9\.]+)\.tar\.gz$/,
     );
 
@@ -43,6 +43,7 @@ share {
             my $build= shift;
             my $flags = '-DWIN32 -D_WIN32';
             $flags .= ' -DWIN64 -D_WIN64' if $bits == 64;
+
             $build->runtime_prop->{$_} .= " $flags" for qw( cflags cflags_static );
             # on windows, we need the following libraries to be included. MinGW can't pull these
             # from source on windows, so we add the equivalent to these pragma comments
@@ -55,7 +56,7 @@ share {
             #pragma comment(lib, "User32.lib")
             #pragma comment(lib, "Userenv.lib")
             #pragma comment(lib, "Ws2_32.lib")
-            $build->runtime_prop->{$_} .= ' -ladvapi32 -lIphlpapi -lkernel32 -lpsapi -lshell32 -luser32 -luserenv -lws2_32' for qw( libs libs_static );
+            $build->runtime_prop->{$_} .= ' -msse2 -ladvapi32 -lIphlpapi -lkernel32 -lpsapi -lshell32 -luser32 -luserenv -lws2_32' for qw( libs libs_static );
         });
 
         build [
