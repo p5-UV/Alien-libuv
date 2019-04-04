@@ -471,6 +471,11 @@
             "version" : "2.046"
          },
          {
+            "class" : "Dist::Zilla::Plugin::GitHubREADME::Badge",
+            "name" : "GitHubREADME::Badge",
+            "version" : "0.27"
+         },
+         {
             "class" : "Dist::Zilla::Plugin::CheckChangeLog",
             "name" : "CheckChangeLog",
             "version" : "0.05"
