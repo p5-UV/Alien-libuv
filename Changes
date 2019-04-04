@@ -1,7 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
-  -
+  - Update to the libuv v1.27.0 release
 
 1.008     2019-02-07
   - Update to the libuv v1.25.0 release
