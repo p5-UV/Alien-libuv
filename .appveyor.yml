@@ -27,7 +27,6 @@ environment:
 install:
   - 'call .appveyor.cmd perl_setup'
   - '%perl% -V'
-  - '%cpanm% -v Net::SSLeay'
   - '%cpanm% -n Alien::Base IO::Socket::SSL LWP::Protocol::https HTTP::Tiny'
   - '%cpanm% --installdeps -n .'
 
