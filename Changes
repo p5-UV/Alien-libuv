@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Revert the removal of NetBSD as a fix for it is in the works:
+    https://github.com/libuv/libuv/pull/2252
 
 1.009     2019-04-09
   - Update to the libuv v1.27.0 release

@@ -14,6 +14,6 @@ if ($^O eq 'MSWin32') {
         die("OS unsupported\nWindows needs to be Win7 or higher.\n");
     }
 }
-elsif ($^O eq 'gnukfreebsd' or $^O eq 'netbsd') {
+elsif ($^O eq 'gnukfreebsd') {
     die("OS unsupported\n");
 }
