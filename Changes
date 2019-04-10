@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.010     2019-04-10
   - Revert the removal of NetBSD as a fix for it is in the works:
     https://github.com/libuv/libuv/pull/2252
 
