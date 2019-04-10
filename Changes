@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.009     2019-04-09
   - Update to the libuv v1.27.0 release
   - Don't try to test on GNUkFreeBSD or NetBSD as the library isn't
     supported there
