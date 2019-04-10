@@ -23,6 +23,9 @@ if ($^O eq 'MSWin32') {
         die("OS unsupported\nWindows needs to be Win7 or higher.\n");
     }
 }
+elsif ($^O eq 'gnukfreebsd' or $^O eq 'netbsd') {
+    die("OS unsupported\n");
+}
 
 my %WriteMakefileArgs = (
   "ABSTRACT" => "Interface to the libuv library L<http://libuv.org>",
