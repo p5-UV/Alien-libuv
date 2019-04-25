@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.011     2019-04-24
   - Update to the libuv v1.28.0 release
 
 1.010     2019-04-10
