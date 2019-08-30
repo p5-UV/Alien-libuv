@@ -1,7 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
-  -
+  - Update to the libuv v1.31.0 release
+  - Run make check on non-windows environments
+  - Update the dzil build
 
 1.011     2019-04-24
   - Update to the libuv v1.28.0 release
