@@ -6,13 +6,14 @@ matrix:
 
 environment:
   matrix:
-    - perl_type: cygwin
     - perl_type: strawberry
-      perl_version: 5.28.0.1
+      perl_version: 5.30.0.1
     - perl_type: strawberry
-      perl_version: 5.26.1.1
+      perl_version: 5.28.2.1
     - perl_type: strawberry
-      perl_version: 5.24.3.1
+      perl_version: 5.26.3.1
+    - perl_type: strawberry
+      perl_version: 5.24.4.1
     - perl_type: strawberry
       perl_version: 5.22.3.1
     - perl_type: strawberry
