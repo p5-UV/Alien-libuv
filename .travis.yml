@@ -8,6 +8,8 @@ language: perl
 perl:
   - "blead"
   - "blead-thr"
+  - "5.30"
+  - "5.30-thr"
   - "5.28"
   - "5.28-thr"
   - "5.26"
