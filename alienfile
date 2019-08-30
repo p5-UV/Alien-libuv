@@ -30,6 +30,7 @@ share {
             '-DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=true',
             '-DCMAKE_INSTALL_PREFIX:PATH=%{.install.prefix}',
             '-DCMAKE_MAKE_PROGRAM:PATH=%{make}',
+            '-DBUILD_TESTING=OFF',
         );
 
         meta->before_hook(build => sub {
