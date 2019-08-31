@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.012     2019-08-31
   - Update to the libuv v1.31.0 release
   - Run make check on non-windows environments
   - Update the dzil build
