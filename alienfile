@@ -103,8 +103,13 @@ share {
             'sh autogen.sh',
             '%{configure}',
             '%{make}',
-            '%{make} check',
+            #'%{make} check',
             '%{make} install',
+        ];
+
+        test [
+            '%{make} check',
+            #'%{make} install',
         ];
     }
 
