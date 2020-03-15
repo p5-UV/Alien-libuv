@@ -40,7 +40,7 @@ my %WriteMakefileArgs = (
     "IPC::Cmd" => 0
   },
   "CONFIGURE_REQUIRES" => {
-    "Alien::Build" => "1.14",
+    "Alien::Build" => "2.11",
     "Alien::Build::MM" => "0.32",
     "Alien::Build::Plugin::Build::Make" => "0.01",
     "Alien::Build::Plugin::Probe::Vcpkg" => "2.14",
