@@ -3,6 +3,10 @@ use Config;
 
 configure { requires 'Alien::Build::Plugin::Build::Make' => '0.01' };
 
+plugin 'Probe::Vcpkg' => (
+    name     => 'libuv',
+    ffi_name => 'libuv',
+);
 plugin 'PkgConfig' => (
     pkg_name => 'libuv',
     minimum_version => '1.0.0',
