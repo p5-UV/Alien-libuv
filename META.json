@@ -26,9 +26,10 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "Alien::Build" : "1.00",
+            "Alien::Build" : "2.11",
             "Alien::Build::MM" : "0.32",
             "Alien::Build::Plugin::Build::Make" : "0",
+            "Alien::Build::Plugin::Probe::Vcpkg" : "2.11",
             "Config" : "0",
             "ExtUtils::MakeMaker" : "6.52",
             "IPC::Cmd" : "0"
@@ -36,9 +37,10 @@
       },
       "configure" : {
          "requires" : {
-            "Alien::Build" : "0.32",
+            "Alien::Build" : "1.14",
             "Alien::Build::MM" : "0.32",
             "Alien::Build::Plugin::Build::Make" : "0.01",
+            "Alien::Build::Plugin::Probe::Vcpkg" : "2.14",
             "ExtUtils::MakeMaker" : "6.52"
          }
       },
@@ -62,7 +64,7 @@
       },
       "runtime" : {
          "requires" : {
-            "Alien::Base" : "1.00",
+            "Alien::Base" : "2.11",
             "base" : "0",
             "perl" : "5.008001",
             "strict" : "0",
@@ -87,7 +89,7 @@
    "provides" : {
       "Alien::libuv" : {
          "file" : "lib/Alien/libuv.pm",
-         "version" : "1.012"
+         "version" : "1.013"
       }
    },
    "release_status" : "stable",
@@ -102,7 +104,7 @@
          "web" : "https://github.com/genio/Alien-libuv"
       }
    },
-   "version" : "1.012",
+   "version" : "1.013",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.026001"
@@ -367,7 +369,7 @@
                   "branch" : null,
                   "changelog" : "Changes",
                   "signed" : 0,
-                  "tag" : "1.012",
+                  "tag" : "1.013",
                   "tag_format" : "%v",
                   "tag_message" : "%v"
                },
@@ -690,10 +692,11 @@
             "Alien::Build::Plugin::Gather::IsolateDynamic" : "0.48",
             "Archive::Tar" : "0",
             "Config" : "0",
-            "HTML::LinkExtor" : "0",
             "HTTP::Tiny" : "0.044",
             "IO::Socket::SSL" : "1.56",
             "IO::Zlib" : "0",
+            "Mojo::DOM" : "0",
+            "Mojolicious" : "7.00",
             "Net::SSLeay" : "1.49",
             "Sort::Versions" : "0",
             "URI" : "0",
