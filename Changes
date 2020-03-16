@@ -6,6 +6,7 @@ Revision history for {{$dist->name}}
     prior to this update
   - Bump prereq to Alien::Build v2.11 to get Probe::Vcpkg
   - Move testing phase to the correct place for the library on non-Windows
+  - Update to the libuv v1.35.0 release
 
 1.012     2019-08-31
   - Update to the libuv v1.31.0 release
