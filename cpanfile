@@ -3,21 +3,21 @@ on 'runtime' => sub {
     requires 'strict';
     requires 'warnings';
     requires 'base';
-    requires 'Alien::Base' => '2.11';
+    requires 'Alien::Base' => '2.15';
 };
 
 on 'configure' => sub {
-    requires 'Alien::Build' => '2.11';
+    requires 'Alien::Build' => '2.15';
     requires 'Alien::Build::MM' => '0.32';
     requires 'Alien::Build::Plugin::Build::Make' => '0.01';
-    requires 'Alien::Build::Plugin::Probe::Vcpkg' => '2.11';
+    requires 'Alien::Build::Plugin::Probe::Vcpkg' => '2.15';
     requires 'ExtUtils::MakeMaker' => '6.52';
 };
 
 on 'build' => sub {
-    requires 'Alien::Build' => '2.11';
+    requires 'Alien::Build' => '2.15';
     requires 'Alien::Build::Plugin::Build::Make';
-    requires 'Alien::Build::Plugin::Probe::Vcpkg' => '2.11';
+    requires 'Alien::Build::Plugin::Probe::Vcpkg' => '2.15';
     requires 'Config';
     requires 'ExtUtils::MakeMaker';
     requires 'IPC::Cmd';
