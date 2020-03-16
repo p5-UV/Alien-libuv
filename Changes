@@ -4,7 +4,7 @@ Revision history for {{$dist->name}}
   - Update documentation and build to use Alien::Base::Wrapper
     This handles edge cases of prereqs that we didn't get manually
     prior to this update
-  - Bump prereq to Alien::Build v2.11 to get Probe::Vcpkg
+  - Bump prereq to Alien::Build v2.15 to get Probe::Vcpkg
   - Move testing phase to the correct place for the library on non-Windows
   - Update to the libuv v1.35.0 release
 
