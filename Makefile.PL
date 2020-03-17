@@ -28,29 +28,29 @@ elsif ($^O eq 'gnukfreebsd') {
 }
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Interface to the libuv library L<http://libuv.org>",
+  "ABSTRACT" => "Interface to the libuv library http://libuv.org",
   "AUTHOR" => "Chase Whitener <capoeirab\@cpan.org>",
   "BUILD_REQUIRES" => {
-    "Alien::Build" => "2.11",
+    "Alien::Build" => "2.15",
     "Alien::Build::MM" => "0.32",
     "Alien::Build::Plugin::Build::Make" => 0,
-    "Alien::Build::Plugin::Probe::Vcpkg" => "2.11",
+    "Alien::Build::Plugin::Probe::Vcpkg" => "2.15",
     "Config" => 0,
     "ExtUtils::MakeMaker" => "6.52",
     "IPC::Cmd" => 0
   },
   "CONFIGURE_REQUIRES" => {
-    "Alien::Build" => "2.11",
+    "Alien::Build" => "2.15",
     "Alien::Build::MM" => "0.32",
     "Alien::Build::Plugin::Build::Make" => "0.01",
-    "Alien::Build::Plugin::Probe::Vcpkg" => "2.14",
+    "Alien::Build::Plugin::Probe::Vcpkg" => "2.15",
     "ExtUtils::MakeMaker" => "6.52"
   },
   "DISTNAME" => "Alien-libuv",
   "LICENSE" => "perl",
   "NAME" => "Alien::libuv",
   "PREREQ_PM" => {
-    "Alien::Base" => "2.11",
+    "Alien::Base" => "2.15",
     "base" => 0,
     "strict" => 0,
     "warnings" => 0
@@ -70,11 +70,11 @@ my %WriteMakefileArgs = (
 );
 
 my %FallbackPrereqs = (
-  "Alien::Base" => "2.11",
-  "Alien::Build" => "2.11",
+  "Alien::Base" => "2.15",
+  "Alien::Build" => "2.15",
   "Alien::Build::MM" => "0.32",
   "Alien::Build::Plugin::Build::Make" => 0,
-  "Alien::Build::Plugin::Probe::Vcpkg" => "2.11",
+  "Alien::Build::Plugin::Probe::Vcpkg" => "2.15",
   "Config" => 0,
   "ExtUtils::MakeMaker" => "6.52",
   "File::Spec" => 0,
