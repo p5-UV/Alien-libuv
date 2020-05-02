@@ -17,7 +17,7 @@ share {
     meta->prop->{env}->{LIBTOOLIZE} = 'libtoolize' if $^O eq 'darwin';
 
     plugin Download => (
-        url     => 'https://dist.libuv.org/dist/v1.34.2',
+        url     => 'https://dist.libuv.org/dist/v1.37.0',
         version => qr/^libuv-v([0-9\.]+)\.tar\.gz$/,
     );
 
@@ -34,7 +34,7 @@ share {
             '-DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=true',
             '-DCMAKE_INSTALL_PREFIX:PATH=%{.install.prefix}',
             '-DCMAKE_MAKE_PROGRAM:PATH=%{make}',
-            '-DBUILD_TESTING=OFF',
+            '-DBUILD_TESTING=ON',
         );
 
         meta->before_hook(build => sub {
@@ -93,6 +93,10 @@ share {
 
                 Path::Tiny->new($build->install_prop->{prefix})->child('lib/pkgconfig/libuv.pc')->spew($pc);
             },
+        ];
+
+        test [
+            'ctest -C Debug --output-on-failure'
         ];
     }
     else {
