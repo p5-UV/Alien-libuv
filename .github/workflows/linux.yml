@@ -27,6 +27,8 @@ jobs:
       image: perl:${{ matrix.perl-version }}
     steps:
       - uses: actions/checkout@v2
+      - name: Install build-essential zlib1g-dev zlib1g libssl libssl-dev
+        run: sudo apt -y install build-essential zlib1g-dev zlib1g libssl libssl-dev
       - name: perl -V
         run: perl -V
       - name: Install cpanm
@@ -36,4 +38,8 @@ jobs:
       - name: Install Dependencies
         run: cpanm -n --installdeps .
       - name: Run Tests
-        run: perl Makefile.PL && make && make test
+        sudo: false
+        run: |
+          perl Makefile.PL
+          make
+          make test

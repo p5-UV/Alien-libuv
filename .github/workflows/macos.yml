@@ -22,4 +22,7 @@ jobs:
       - name: Install Dependencies
         run: cpanm --installdeps .
       - name: Run Tests
-        run: perl Makefile.PL && make && make test
+        run: |
+          perl Makefile.PL
+          make
+          make test
