@@ -1,0 +1,39 @@
+name: windows
+on:
+  push:
+    branches:
+      - '*'
+    tags-ignore:
+      - '*'
+  pull_request:
+jobs:
+  perl:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        perl-version:
+          - '5.14.4.1'
+          - '5.16.3.20170202'
+          - '5.18.4.1'
+          - '5.20.3.3'
+          - '5.22.3.1'
+          - '5.24.4.1'
+          - '5.26.3.1'
+          - '5.28.2.1'
+          - '5.30.0.1'
+    steps:
+      - name: Set git to use LF
+        run: |
+          git config --global core.autocrlf false
+          git config --global core.eol lf
+      - uses: actions/checkout@v2
+      - name: Set up Perl
+        run: |
+          cinst -y StrawberryPerl --version ${{ matrix.perl-version }}
+          echo "##[add-path]C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin"
+      - name: perl -V
+        run: perl -V
+      - name: Install Dependencies
+        run: curl -L https://cpanmin.us | perl - --installdeps .
+      - name: Run Tests
+        run: perl Makefile.PL && make && make test
