@@ -15,9 +15,11 @@ jobs:
         run: brew install perl
       - name: perl -V
         run: perl -V
+      - name: Install cpanm
+        run: curl -L https://cpanmin.us | perl - App::cpanminus
       - name: Install Alien Stuff
         run: cpanm -n Alien::Build Alien::Base URI URI::Escape Mojo::DOM58 Alien::Autotools
       - name: Install Dependencies
-        run: curl -L https://cpanmin.us | perl - --installdeps .
+        run: cpanm --installdeps .
       - name: Run Tests
         run: perl Makefile.PL && make && make test
