@@ -1,6 +1,3 @@
-[![Build Status](https://travis-ci.org/genio/Alien-libuv.svg?branch=master)](https://travis-ci.org/genio/Alien-libuv)
-[![AppVeyor Status](https://ci.appveyor.com/api/projects/status/github/genio/Alien-libuv?branch=master&svg=true)](https://ci.appveyor.com/project/genio/Alien-libuv)
-
 # NAME
 
 Alien::libuv - Interface to the libuv library [http://libuv.org](http://libuv.org)

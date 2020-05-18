@@ -2,7 +2,8 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
   - Run test suite on Windows (takes a bit longer to compile)
-  - Update the the libuv v1.37.0 release
+  - Update the the libuv v1.38.0 release
+  - Use GitHub Actions rather than TravisCI and AppVeyor
 
 1.013     2020-03-16
   - Update documentation and build to use Alien::Base::Wrapper
