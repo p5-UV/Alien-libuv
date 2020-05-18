@@ -9,10 +9,11 @@ on:
 jobs:
   perl:
     runs-on: windows-latest
-    # strategy:
-    #   matrix:
-    #     perl-version:
-    #       - '5.14.4.1'
+    strategy:
+      fail-fast: true
+      matrix:
+        perl-version:
+          - '5.14.4.1'
     #       - '5.16.3.20170202'
     #       - '5.18.4.1'
     #       - '5.20.3.3'
@@ -27,10 +28,10 @@ jobs:
           git config --global core.autocrlf false
           git config --global core.eol lf
       - uses: actions/checkout@v2
-      # - name: Set up Perl
-      #   run: |
-      #     cinst -y StrawberryPerl --allow-downgrade --version ${{ matrix.perl-version }}
-      #     echo "##[add-path]C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin"
+      - name: Set up Perl
+        run: |
+          cinst -y StrawberryPerl --version ${{ matrix.perl-version }} -my --install-args="'/DIR=C:\sp${{ matrix.perl-version }}'"
+          echo "::add-path::C:\sp${{ matrix.perl-version }}\c\bin;C:\sp${{ matrix.perl-version }}\perl\site\bin;C:\sp${{ matrix.perl-version }}\perl\bin"
       - name: perl -V
         run: perl -V
       - name: Install cpanm
