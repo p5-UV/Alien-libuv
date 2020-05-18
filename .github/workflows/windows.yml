@@ -29,7 +29,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set up Perl
         run: |
-          cinst -y StrawberryPerl --version ${{ matrix.perl-version }}
+          cinst -y StrawberryPerl --allow-downgrade --version ${{ matrix.perl-version }}
           echo "##[add-path]C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin"
       - name: perl -V
         run: perl -V

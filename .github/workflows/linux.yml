@@ -29,6 +29,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: perl -V
         run: perl -V
+      - name: Install Alien Stuff
+        run: cpanm -n Alien::Build Alien::Base URI URI::Escape Mojo::DOM58 Alien::Autotools
       - name: Install Dependencies
         run: cpanm -n --installdeps .
       - name: Run Tests
