@@ -36,11 +36,8 @@ jobs:
       - name: Install Dependencies
         run: cpanm -n --installdeps .
       - run: id
-      - name: Create a non-root user called "runner"
-        run: dscl -q . -create /Users/runner
-      - name: Run Tests as non-root user "runner"
+      - name: Run Tests
         run: |
-          chown -R runner:runner .
-          runuser runner -c 'perl Makefile.PL'
-          runuser runner -c 'make'
-          runuser runner -c 'make test'
+          perl Makefile.PL
+          make
+          make test
