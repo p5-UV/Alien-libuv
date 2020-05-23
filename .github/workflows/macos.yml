@@ -36,7 +36,7 @@ jobs:
       - name: Install Dependencies
         run: cpanm -n --installdeps .
       - name: Create a non-root user called "runner"
-        run: dscl -q / -create /Users/runner UserShell /bin/bash
+        run: dscl -q . -create /Users/runner UserShell /bin/bash
       - name: Run Tests as non-root user "runner"
         run: |
           chown -R runner:runner .
