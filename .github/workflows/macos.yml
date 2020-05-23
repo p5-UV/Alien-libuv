@@ -28,7 +28,7 @@ jobs:
       - name: Setup perl
         uses: shogo82148/actions-setup-perl@v1
         with:
-          perl-version: ${{ matrix.perl }}
+          perl-version: ${{ matrix.perl-version }}
       - name: perl -V
         run: perl -V
       - name: Install Alien Stuff
