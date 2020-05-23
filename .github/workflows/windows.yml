@@ -30,7 +30,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Remove Strawberry Perl and MinGW from Path
         run: |
-          echo "::set-env name=PATH::($env:Path.split(";", [System.StringSplitOptions]::RemoveEmptyEntries) | where{-not ($_ -clike '*Strawberry*' -or $_ -clike '*mingw*')}) -join ';'"
+          echo "::set-env name=PATH::$(($env:Path.split(";", [System.StringSplitOptions]::RemoveEmptyEntries) | where{-not ($_ -clike '*Strawberry*' -or $_ -clike '*mingw*')}) -join ';')"
       - run: echo $env:PATH
       - run: whoami
       # - name: Set up Perl
