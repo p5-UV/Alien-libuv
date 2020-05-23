@@ -37,6 +37,6 @@ jobs:
         run: adduser --disabled-password --gecos '' runner
       - name: Run Tests as non-root user "runner"
         run: |
-          runuser -l runner -c 'perl Makefile.PL'
-          runuser -l runner -c 'make'
-          runuser -l runner -c 'make test'
+          runuser runner -c 'perl Makefile.PL'
+          runuser runner -c 'make'
+          runuser runner -c 'make test'
