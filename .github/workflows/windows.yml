@@ -28,7 +28,7 @@ jobs:
           git config --global core.autocrlf false
           git config --global core.eol lf
       - uses: actions/checkout@v2
-      - run: echo %PATH%
+      - run: echo $env:PATH
       - run: whoami
       # - name: Set up Perl
       #   run: |
