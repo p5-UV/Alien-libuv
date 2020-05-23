@@ -35,8 +35,9 @@ jobs:
         run: cpanm -n Alien::Build Alien::Base URI URI::Escape Mojo::DOM58 Alien::Autotools
       - name: Install Dependencies
         run: cpanm -n --installdeps .
+      - run: id
       - name: Create a non-root user called "runner"
-        run: dscl -q . -create /Users/runner UserShell /bin/bash
+        run: dscl -q . -create /Users/runner
       - name: Run Tests as non-root user "runner"
         run: |
           chown -R runner:runner .
