@@ -26,13 +26,19 @@ jobs:
     container:
       image: perl:${{ matrix.perl-version }}
     steps:
+      - name: Create a non-root user called "runner"
+        run: |
+          adduser --disabled-password --gecos '' runner
+          su - runner
+          cpanm -L perl5 local::lib
+          eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
+          echo 'eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"' >>~/.bashrc
+          exit
       - uses: actions/checkout@v2
-      - name: Install build-essential zlib1g-dev zlib1g libssl libssl-dev
-        run: sudo apt -y install build-essential zlib1g-dev zlib1g libssl libssl-dev
+      - name: Run all tests as non-root "runner"
+        run: su - runner
       - name: perl -V
         run: perl -V
-      - name: Install cpanm
-        run: curl -L https://cpanmin.us | perl - App::cpanminus
       - name: Install Alien Stuff
         run: cpanm -n Alien::Build Alien::Base URI URI::Escape Mojo::DOM58 Alien::Autotools
       - name: Install Dependencies
