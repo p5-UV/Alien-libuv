@@ -40,7 +40,7 @@ jobs:
           7z x "${{matrix.perl-version}}.zip" -oC:\straw
           echo "::add-path::C:\straw\c\bin;C:\straw\perl\site\bin;C:\straw\perl\bin"
           Invoke-WebRequest -Uri https://cpanmin.us -OutFile setup-cpanm.pl
-          perl setup-cpanm.pl App::cpanminus
+          perl setup-cpanm.pl ExtUtils::Manifest App::cpanminus
       - name: perl -V
         run: perl -V
       - name: Install Alien Stuff
