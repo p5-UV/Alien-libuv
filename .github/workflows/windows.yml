@@ -36,8 +36,8 @@ jobs:
       - name: Set up Perl
         run: |
           mkdir C:\straw
-          Invoke-WebRequest -Uri http://strawberry.perl.bot/download/${{ matrix.perl-version }}/strawberry-perl-{{ matrix.perl-version }}-64bit-portable.zip -OutFile {{matrix.perl-version}}.zip
-          7z e "{{matrix.perl-version}}.zip" -oC:\straw
+          Invoke-WebRequest -Uri http://strawberry.perl.bot/download/${{ matrix.perl-version }}/strawberry-perl-${{ matrix.perl-version }}-64bit-portable.zip -OutFile ${{matrix.perl-version}}.zip
+          7z e "${{matrix.perl-version}}.zip" -oC:\straw
           echo "::add-path::C:\straw\c\bin;C:\straw\perl\site\bin;C:\straw\perl\bin"
       - name: perl -V
         run: perl -V
