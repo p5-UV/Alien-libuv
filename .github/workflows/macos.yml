@@ -9,20 +9,37 @@ on:
 jobs:
   perl:
     runs-on: macOS-latest
+    strategy:
+      matrix:
+        perl-version:
+          - '5.10'
+          # - '5.12'
+          # - '5.14'
+          # - '5.16'
+          # - '5.18'
+          # - '5.20'
+          # - '5.22'
+          # - '5.24'
+          # - '5.26'
+          # - '5.28'
+          # - '5.30'
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Perl
-        run: brew install perl
+      - name: Setup perl
+        uses: shogo82148/actions-setup-perl@v1
+        with:
+          perl-version: ${{ matrix.perl }}
       - name: perl -V
         run: perl -V
-      - name: Install cpanm
-        run: curl -L https://cpanmin.us | perl - App::cpanminus
       - name: Install Alien Stuff
         run: cpanm -n Alien::Build Alien::Base URI URI::Escape Mojo::DOM58 Alien::Autotools
       - name: Install Dependencies
-        run: cpanm --installdeps .
-      - name: Run Tests
+        run: cpanm -n --installdeps .
+      - name: Create a non-root user called "runner"
+        run: adduser --disabled-password --gecos '' runner
+      - name: Run Tests as non-root user "runner"
         run: |
-          perl Makefile.PL
-          make
-          make test
+          chown -R runner:runner .
+          runuser runner -c 'perl Makefile.PL'
+          runuser runner -c 'make'
+          runuser runner -c 'make test'
