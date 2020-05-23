@@ -39,7 +39,7 @@ jobs:
           echo $env:PATH
       - name: Set up our new Strawberry Perl
         run: |
-          Invoke-WebRequest -Uri http://strawberry.perl.bot/download/${{ matrix.perl-version }}/strawberry-perl-${{ matrix.perl-version }}-64bit-portable.zip -OutFile ${{matrix.perl-version}}.zip
+          Invoke-WebRequest -Uri http://strawberry-perl.s3-website-us-east-1.amazonaws.com/download/${{ matrix.perl-version }}/strawberry-perl-${{ matrix.perl-version }}-64bit-portable.zip -OutFile ${{matrix.perl-version}}.zip
           7z x "${{matrix.perl-version}}.zip" -oC:\straw
       - name: perl -V
         run: perl -V
