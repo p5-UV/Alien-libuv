@@ -47,7 +47,7 @@ jobs:
         run: |
           cpanm ExtUtils::Manifest App::cpanminus
           cpanm -n Alien::Build Alien::Base URI URI::Escape Mojo::DOM58
-      # - name: Install Dependencies
-      #   run: cpanm --installdeps .
-      # - name: Run Tests
-      #   run: cpanm -v .
+      - name: Install Dependencies
+        run: cpanm --installdeps .
+      - name: Run Tests
+        run: cpanm --testonly -v .
