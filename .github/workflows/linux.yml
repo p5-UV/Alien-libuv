@@ -26,25 +26,17 @@ jobs:
     container:
       image: perl:${{ matrix.perl-version }}
     steps:
-      - name: Create a non-root user called "runner"
-        run: |
-          adduser --disabled-password --gecos '' runner
-          su - runner
-          cpanm -L perl5 local::lib
-          eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
-          echo 'eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"' >>~/.bashrc
-          exit
       - uses: actions/checkout@v2
-      - name: Run all tests as non-root "runner"
-        run: su - runner
       - name: perl -V
         run: perl -V
       - name: Install Alien Stuff
         run: cpanm -n Alien::Build Alien::Base URI URI::Escape Mojo::DOM58 Alien::Autotools
       - name: Install Dependencies
         run: cpanm -n --installdeps .
-      - name: Run Tests
+      - name: Create a non-root user called "runner"
+        run: adduser --disabled-password --gecos '' runner
+      - name: Run Tests as non-root user "runner"
         run: |
-          perl Makefile.PL
-          make
-          make test
+          runuser -l runner -c 'perl Makefile.PL'
+          runuser -l runner -c 'make'
+          runuser -l runner -c 'make test'
