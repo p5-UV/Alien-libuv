@@ -3,6 +3,8 @@ Revision history for {{$dist->name}}
 {{$NEXT}}
   - Update CI to use GitHub Actions rather than Travis and AppVeyor
   - Update the the libuv v1.38.0 release
+  - Only run upstream (actual libuv tests) when RELEASE_TESTING
+    or AUTOMATED_TESTING is on
 
 1.013     2020-03-16
   - Update documentation and build to use Alien::Base::Wrapper
