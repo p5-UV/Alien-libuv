@@ -28,23 +28,25 @@ jobs:
           git config --global core.autocrlf false
           git config --global core.eol lf
       - uses: actions/checkout@v2
-      - name: Remove Strawberry Perl and MinGW from Path
+      - name: Remove GH's Strawberry Perl and MinGW from Path
         run: |
           echo "::set-env name=PATH::$(($env:Path.split(";", [System.StringSplitOptions]::RemoveEmptyEntries) | where{-not ($_ -clike '*Strawberry*' -or $_ -clike '*mingw*')}) -join ';')"
-      - run: echo $env:PATH
-      - run: whoami
-      - name: Set up Perl
+      - name: Add our new Strawberry Portable Perl Paths
         run: |
+          Remove-Item C:\straw -Recurse -ErrorAction Ignore
           mkdir C:\straw
+          echo "::add-path::C:\straw\c\bin;C:\straw\perl\site\bin;C:\straw\perl\bin"
+          echo $env:PATH
+      - name: Set up our new Strawberry Perl
+        run: |
           Invoke-WebRequest -Uri http://strawberry.perl.bot/download/${{ matrix.perl-version }}/strawberry-perl-${{ matrix.perl-version }}-64bit-portable.zip -OutFile ${{matrix.perl-version}}.zip
           7z x "${{matrix.perl-version}}.zip" -oC:\straw
-          echo "::add-path::C:\straw\c\bin;C:\straw\perl\site\bin;C:\straw\perl\bin"
-          Invoke-WebRequest -Uri https://cpanmin.us -OutFile setup-cpanm.pl
-          perl setup-cpanm.pl ExtUtils::Manifest App::cpanminus
       - name: perl -V
         run: perl -V
       - name: Install Alien Stuff
-        run: cpanm -n Alien::Build Alien::Base URI URI::Escape Mojo::DOM58
+        run: |
+          cpanm ExtUtils::Manifest App::cpanminus
+          cpanm -n Alien::Build Alien::Base URI URI::Escape Mojo::DOM58
       # - name: Install Dependencies
       #   run: cpanm --installdeps .
       # - name: Run Tests
