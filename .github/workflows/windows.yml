@@ -33,12 +33,14 @@ jobs:
           echo "::set-env name=PATH::$(($env:Path.split(";", [System.StringSplitOptions]::RemoveEmptyEntries) | where{-not ($_ -clike '*Strawberry*' -or $_ -clike '*mingw*')}) -join ';')"
       - run: echo $env:PATH
       - run: whoami
-      # - name: Set up Perl
-      #   run: |
-      #     cinst -y StrawberryPerl --version ${{ matrix.perl-version }} -my --install-args="'/DIR=C:\sp${{ matrix.perl-version }}'"
-      #     echo "::add-path::C:\sp${{ matrix.perl-version }}\c\bin;C:\sp${{ matrix.perl-version }}\perl\site\bin;C:\sp${{ matrix.perl-version }}\perl\bin"
-      # - name: perl -V
-      #   run: perl -V
+      - name: Set up Perl
+        run: |
+          mkdir C:\sp
+          Invoke-WebRequest -Uri "http://strawberry.perl.bot/download/${{ matrix.perl-version }}/strawberry-perl-${{ matrix.perl-version }}-64bit-portable.zip" -OutFile "{{matrix.perl-version}}.zip"
+          7z e "{{matrix.perl-version}}.zip" -oC:\sp
+          echo "::add-path::C:\sp\c\bin;C:\sp\perl\site\bin;C:\sp\perl\bin"
+      - name: perl -V
+        run: perl -V
       # - name: Install cpanm
       #   run: curl -L https://cpanmin.us | perl - App::cpanminus
       # - name: Install Alien Stuff
