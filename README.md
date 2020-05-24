@@ -1,3 +1,7 @@
+[![Actions Status](https://github.com/-5-UV/Alien-libuv/workflows/linux/badge.svg)](https://github.com/-5-UV/Alien-libuv/actions)
+[![Actions Status](https://github.com/-5-UV/Alien-libuv/workflows/macos/badge.svg)](https://github.com/-5-UV/Alien-libuv/actions)
+[![Actions Status](https://github.com/-5-UV/Alien-libuv/workflows/windows/badge.svg)](https://github.com/-5-UV/Alien-libuv/actions)
+
 # NAME
 
 Alien::libuv - Interface to the libuv library [http://libuv.org](http://libuv.org)
