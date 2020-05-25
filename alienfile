@@ -13,7 +13,7 @@ plugin 'PkgConfig' => (
 );
 
 share {
-    my $run_upstream_tests = ($ENV{AUTOMATED_TESTING} || $ENV{RELEASE_TESTING}) ? 1 : 0;
+    my $run_upstream_tests = ($^O =~ /darwin/i || $ENV{AUTOMATED_TESTING} || $ENV{RELEASE_TESTING}) ? 1 : 0;
 
     # note on apple weirdisms: https://github.com/joyent/libuv/issues/1200
     meta->prop->{env}->{LIBTOOLIZE} = 'libtoolize' if $^O eq 'darwin';

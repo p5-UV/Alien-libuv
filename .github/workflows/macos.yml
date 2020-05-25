@@ -29,6 +29,10 @@ jobs:
         uses: shogo82148/actions-setup-perl@v1
         with:
           perl-version: ${{ matrix.perl-version }}
+      - name: Turn off Firewall
+        run: |
+          sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 0
+          sudo launchctl unload /System/Library/LaunchDaemons/com.apple.alf.agent.plist
       - name: perl -V
         run: perl -V
       - name: Install Alien Stuff
