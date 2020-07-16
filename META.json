@@ -89,7 +89,7 @@
    "provides" : {
       "Alien::libuv" : {
          "file" : "lib/Alien/libuv.pm",
-         "version" : "1.014"
+         "version" : "1.015"
       }
    },
    "release_status" : "stable",
@@ -104,7 +104,7 @@
          "web" : "https://github.com/p5-UV/Alien-libuv"
       }
    },
-   "version" : "1.014",
+   "version" : "1.015",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.026001"
@@ -369,7 +369,7 @@
                   "branch" : null,
                   "changelog" : "Changes",
                   "signed" : 0,
-                  "tag" : "1.014",
+                  "tag" : "1.015",
                   "tag_format" : "%v",
                   "tag_message" : "%v"
                },
