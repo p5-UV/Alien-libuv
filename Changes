@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.014     2020-07-15
   - Update CI to use GitHub Actions rather than Travis and AppVeyor
   - Update the the libuv v1.38.1 release
   - Only run upstream (actual libuv tests) when RELEASE_TESTING
