@@ -42,4 +42,4 @@ jobs:
       - name: Install Dependencies
         run: cpanm --installdeps .
       - name: Run Tests
-        run: cpanm --testonly -v .
+        run: cpanm --test-only -v .
