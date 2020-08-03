@@ -1,7 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
-  -
+  - Add some documentation about backwards compatibility.
 
 1.014     2020-07-15
   - Update CI to use GitHub Actions rather than Travis and AppVeyor
