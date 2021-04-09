@@ -2,6 +2,8 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
   - Add some documentation about backwards compatibility.
+  - Update to the libuv v1.41.0 release.
+  - Update to latest version of @Starter::Git for builds
 
 1.014     2020-07-15
   - Update CI to use GitHub Actions rather than Travis and AppVeyor
