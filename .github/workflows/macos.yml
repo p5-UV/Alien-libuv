@@ -13,13 +13,13 @@ jobs:
       matrix:
         perl-version:
           - '5.32'
-          - '5.30'
+          # - '5.30'
           # - '5.28'
           # - '5.26'
           # - '5.24'
           # - '5.22'
           # - '5.20'
-          - '5.18'
+          # - '5.18'
           # - '5.16'
           # - '5.14'
           # - '5.12'
@@ -32,6 +32,8 @@ jobs:
           perl-version: ${{ matrix.perl-version }}
       - name: perl -V
         run: perl -V
+      - name: install automake autoconf libtool
+        run: brew install autoconf automake libtool
       - name: Install Alien Stuff
         run: cpanm -n Alien::Build Alien::Base URI URI::Escape Mojo::DOM58 Alien::Autotools
       - name: Install Dependencies
