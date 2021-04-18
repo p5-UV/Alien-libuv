@@ -19,10 +19,11 @@ jobs:
           # - '5.26'
           # - '5.24'
           # - '5.22'
-          # - '5.20'
+          - '5.20'
+          # doesn't work for earlier versions: https://github.com/libuv/libuv/issues/2742
           # - '5.18'
           # - '5.16'
-          - '5.14'
+          # - '5.14'
     steps:
       - name: Setup perl
         uses: shogo82148/actions-setup-perl@v1

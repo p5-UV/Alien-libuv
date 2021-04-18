@@ -35,9 +35,7 @@ jobs:
       - name: install automake autoconf libtool
         run: brew install autoconf automake libtool
       - name: Install Alien Stuff
-        run: cpanm -n Alien::Build Alien::Base URI URI::Escape Mojo::DOM58
-      - name: Install Alien::Autotools
-        run: cpanm -vn Alien::Autotools
+        run: cpanm -n Alien::Build Alien::Base URI URI::Escape Mojo::DOM58 Alien::Autotools
       - name: Install Dependencies
         run: cpanm -n --installdeps .
       - run: id
